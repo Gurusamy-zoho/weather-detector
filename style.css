@@ -27,7 +27,7 @@ body {
     margin-top: 20px;
     padding: 20px;
     background-color: #f9f9f9;
-    border-radius: 5px;
+    border-radius: 10px;
     display: none;
 }
 
@@ -50,3 +50,4 @@ button {
     border: none;
     border-radius: 5px;
 }
+
