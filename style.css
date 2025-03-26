@@ -39,7 +39,7 @@ body {
     font-size: 18px;
 }
 
-button {
+#getWeather {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -47,5 +47,31 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+}
+
+#showbtn{
+    color: #007bff; 
+    font-size: 16px; 
+    font-weight:bold; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    display: inline-flex; 
+    align-items: center;
+}
+#showbtn:hover{
+    color: #5da8f9;
+}
+
+#showbtn i{
+    color:#007bff; 
+    font-size: 16px; 
+    font-weight:bold; 
+    margin-left: 4px; 
+    margin-top:4px;
+}
+
+.extra-Details{
+    display: none; 
 }
 
