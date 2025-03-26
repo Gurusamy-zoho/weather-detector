@@ -52,20 +52,20 @@ document.getElementById('getWeather').addEventListener('click', () => {
             let sunsetIcon = "🌇";
             let timezoneIcon = "🕒";
     
-            // function convertUnixToTime(unixTimestamp) {
-            //     let date = new Date(unixTimestamp * 1000);
-            //     let hours = date.getHours();
-            //     let minutes = date.getMinutes();
-            //     let ampm = hours >= 12 ? "PM" : "AM";
+            function convertUnixToTime(unixTimestamp) {
+                let date = new Date(unixTimestamp * 1000);
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let ampm = hours >= 12 ? "PM" : "AM";
     
-            //     hours = hours % 12 || 12;
-            //     minutes = minutes < 10 ? "0" + minutes : minutes; 
+                hours = hours % 12 || 12;
+                minutes = minutes < 10 ? "0" + minutes : minutes; 
     
-            //     return `${hours}:${minutes} ${ampm}`;
-            // }
+                return `${hours}:${minutes} ${ampm}`;
+            }
     
-            // let sunriseTime = convertUnixToTime(data.sys.sunrise);
-            // let sunsetTime = convertUnixToTime(data.sys.sunset);
+            let sunriseTime = convertUnixToTime(data.sys.sunrise);
+            let sunsetTime = convertUnixToTime(data.sys.sunset);
     
             // function formatTimezone(offsetSeconds) {
             //     let offsetHours = Math.floor(offsetSeconds / 3600);
