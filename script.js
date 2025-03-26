@@ -67,14 +67,14 @@ document.getElementById('getWeather').addEventListener('click', () => {
             let sunriseTime = convertUnixToTime(data.sys.sunrise);
             let sunsetTime = convertUnixToTime(data.sys.sunset);
     
-            // function formatTimezone(offsetSeconds) {
-            //     let offsetHours = Math.floor(offsetSeconds / 3600);
-            //     let offsetMinutes = Math.abs(offsetSeconds % 3600) / 60;
-            //     let sign = offsetHours >= 0 ? "+" : "-";
-            //     return `GMT${sign}${Math.abs(offsetHours)}:${offsetMinutes === 0 ? "00" : offsetMinutes}`;
-            // }
+            function formatTimezone(offsetSeconds) {
+                let offsetHours = Math.floor(offsetSeconds / 3600);
+                let offsetMinutes = Math.abs(offsetSeconds % 3600) / 60;
+                let sign = offsetHours >= 0 ? "+" : "-";
+                return `GMT${sign}${Math.abs(offsetHours)}:${offsetMinutes === 0 ? "00" : offsetMinutes}`;
+            }
     
-            // let gmtTimezone = formatTimezone(data.timezone);
+            let gmtTimezone = formatTimezone(data.timezone);
     
             let weatherDetails = document.getElementById('weatherDetails');
             let weatherInfo = `
